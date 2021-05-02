@@ -1,0 +1,63 @@
+﻿@page
+@model HM_RECORD.Pages.StaffList.EditModel
+
+
+<br />
+<h2 class="text-info">Edit Staff</h2>
+<br />
+
+<div class="border container" style="padding:30px;">
+    <form method="post">
+        <input type="hidden" asp-for="Staff.Id" />
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Staff.Surname"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Staff.Surname" class="form-control" />
+            </div>
+            <span asp-validation-for="Staff.Surname" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Staff.Name"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Staff.Name" class="form-control" />
+            </div>
+            <span asp-validation-for="Staff.Name" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Staff.Gender"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Staff.Gender" class="form-control" />
+            </div>
+            <span asp-validation-for="Staff.Gender" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Staff.PhoneNo"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Staff.PhoneNo" class="form-control" />
+            </div>
+            <span asp-validation-for="Staff.PhoneNo" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3 offset-3">
+                <input type="submit" value="Update" class="btn btn-primary form-control" />
+            </div>
+            <div class="col-3">
+                <a asp-page="Index" class="btn btn-success form-control">Back To List</a>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}
+
